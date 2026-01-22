@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
         <span className="navbar-link">
           <span role="img" aria-label="monitoring">🔍</span> Monitoring
         </span>
-        <span className="navbar-link">
+        <Link to="/captures" className={location.pathname === '/captures' ? 'navbar-link-active' : 'navbar-link'}>
           <span role="img" aria-label="captures">📷</span> Captures
-        </span>
+        </Link>
         <span className="navbar-link" style={{ position: 'relative' }}>
           <span role="img" aria-label="config">⚙️</span> Configuration <span style={{fontSize: 12, marginLeft: 2}}>▼</span>
           <div className="navbar-config-dropdown">
