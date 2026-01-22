@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Query } from '@nestjs/common';
 import { EventLogService } from './event-log.service';
 import { EventLogEntity } from './event-log.entity';
 
@@ -7,8 +7,13 @@ export class EventLogController {
   constructor(private readonly eventLogService: EventLogService) {}
 
   @Get()
-  async findAll(): Promise<EventLogEntity[]> {
-    return this.eventLogService.findAll();
+  async findAll(
+    @Query('device_name') deviceName?: string,
+    @Query('symbolic_name') symbolicName?: string,
+    @Query('date_debut') dateDebut?: string,
+    @Query('date_fin') dateFin?: string,
+  ): Promise<EventLogEntity[]> {
+    return this.eventLogService.findAllFiltered(deviceName, symbolicName, dateDebut, dateFin);
   }
 
   @Get(':id')

@@ -17,9 +17,9 @@ const Navbar: React.FC = () => {
         <Link to="/courbes" className={location.pathname === '/courbes' ? 'navbar-link-active' : 'navbar-link'}>
           <span role="img" aria-label="chart">📈</span> Courbes
         </Link>
-        <span className="navbar-link">
+        <Link to="/journal" className={location.pathname === '/journal' ? 'navbar-link-active' : 'navbar-link'}>
           <span role="img" aria-label="journal">📋</span> Journal
-        </span>
+        </Link>
         <span className="navbar-link">
           <span role="img" aria-label="monitoring">🔍</span> Monitoring
         </span>
