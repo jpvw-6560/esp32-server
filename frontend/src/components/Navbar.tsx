@@ -14,9 +14,9 @@ const Navbar: React.FC = () => {
         <Link to="/apercu" className={location.pathname === '/apercu' || location.pathname === '/' ? 'navbar-link-active' : 'navbar-link'}>
           <span role="img" aria-label="chart">📊</span> Aperçu
         </Link>
-        <span className="navbar-link">
+        <Link to="/courbes" className={location.pathname === '/courbes' ? 'navbar-link-active' : 'navbar-link'}>
           <span role="img" aria-label="chart">📈</span> Courbes
-        </span>
+        </Link>
         <span className="navbar-link">
           <span role="img" aria-label="journal">📋</span> Journal
         </span>
