@@ -1,0 +1,137 @@
+.
+├── APERCU_STATUS_README.md
+├── api
+│   ├── admin_api.js
+│   ├── admin_devices.js
+│   ├── db.js
+│   ├── esp_api.js
+│   ├── index.js
+│   └── routes
+├── config
+│   └── telegram.js
+├── controllers
+│   ├── CameraController.js
+│   ├── ChartConfigController.js
+│   ├── EnrollController.js
+│   ├── EventController.js
+│   ├── EventLogController.js
+│   ├── IoHistoryController.js
+│   ├── IoPointController.js
+│   ├── LogicController.js
+│   ├── ModuleController.js
+│   └── RealtimeController.js
+├── core
+│   ├── buffer_io_points.js
+│   ├── buffer_store.js
+│   ├── cycle.js
+│   ├── esp_registry.js
+│   ├── event_engine.js
+│   ├── io_history_logger.js
+│   ├── logic
+│   │   └── logic.txt
+│   ├── logic_engine.js
+│   ├── mie_store.js
+│   ├── mis_store.js
+│   ├── monitor.js
+│   ├── mqtt_client.js
+│   ├── rtdb_io.js
+│   └── serverDb.js
+├── database
+│   ├── home_network.sql
+│   └── migrations
+│       ├── 001_create_io_history.sql
+│       └── 002_create_chart_configs.sql
+├── demo_apercu_status.html
+├── demo_cartes_modules.html
+├── docker-compose.yml
+├── Dockerfile
+├── events
+│   └── event_log.js
+├── models
+│   ├── ChartConfig.js
+│   ├── Event.js
+│   ├── EventLog.js
+│   ├── IoHistory.js
+│   ├── IoPoint.js
+│   └── Module.js
+├── MVC_STRUCTURE.md
+├── new_mvc_project
+│   ├── composer.json
+│   ├── public
+│   │   ├── css
+│   │   │   └── style.css
+│   │   ├── index.php
+│   │   └── js
+│   │       └── app.js
+│   ├── README.md
+│   └── src
+│       ├── config
+│       │   └── config.php
+│       ├── controllers
+│       │   └── HomeController.php
+│       ├── models
+│       │   └── User.php
+│       └── views
+│           ├── home
+│           └── layouts
+├── package.json
+├── package-lock.json
+├── public
+│   ├── admin.css
+│   ├── admin.html
+│   ├── admin.js
+│   ├── captures.css
+│   ├── captures.html
+│   ├── captures.js
+│   ├── chart-config.html
+│   ├── chart-config.js
+│   ├── charts.css
+│   ├── chart-view.html
+│   ├── chart-view.js
+│   ├── dark-theme-global.css
+│   ├── event-logs.css
+│   ├── events.css
+│   ├── events.html
+│   ├── events.js
+│   ├── favicon.svg
+│   ├── journal.html
+│   ├── journal.js
+│   ├── load-navbar.js
+│   ├── monitoring.html
+│   ├── navbar.html
+│   ├── telegram_test.html
+│   └── variables.css
+├── README.md
+├── refactor_before.txt
+├── routes
+│   ├── camera.js
+│   ├── chart-configs.js
+│   ├── enroll.js
+│   ├── event-logs.js
+│   ├── events.js
+│   ├── io-history.js
+│   ├── io-points.js
+│   ├── logic.js
+│   ├── modules.js
+│   ├── monitor.js
+│   ├── realtime.js
+│   └── telegram.js
+├── scripts
+│   ├── auto_clean_mqtt.sh
+│   ├── clean_retained_messages.js
+│   ├── list_di_esp01.js
+│   ├── list_do.js
+│   ├── print_rtdb_do.js
+│   └── print_rtdb_io.js
+├── services
+│   └── telegram.js
+├── src
+│   ├── index.js
+│   └── routes
+│       ├── admin_pages.js
+│       └── static_pages.js
+├── structure_clean.txt
+├── structure_full.txt
+└── test_apercu_status.sh
+
+28 directories, 107 files

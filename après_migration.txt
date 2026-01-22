@@ -1,0 +1,114 @@
+.
+├── après_migration.txt
+├── backend
+│   ├── api
+│   │   ├── admin_api.js
+│   │   ├── admin_devices.js
+│   │   ├── db.js
+│   │   ├── esp_api.js
+│   │   ├── index.js
+│   │   └── routes
+│   ├── config
+│   │   └── telegram.js
+│   ├── controllers
+│   │   ├── CameraController.js
+│   │   ├── ChartConfigController.js
+│   │   ├── EnrollController.js
+│   │   ├── EventController.js
+│   │   ├── EventLogController.js
+│   │   ├── IoHistoryController.js
+│   │   ├── IoPointController.js
+│   │   ├── LogicController.js
+│   │   ├── ModuleController.js
+│   │   └── RealtimeController.js
+│   ├── core
+│   │   ├── buffer_io_points.js
+│   │   ├── buffer_store.js
+│   │   ├── cycle.js
+│   │   ├── esp_registry.js
+│   │   ├── event_engine.js
+│   │   ├── io_history_logger.js
+│   │   ├── logic
+│   │   │   └── logic.txt
+│   │   ├── logic_engine.js
+│   │   ├── mie_store.js
+│   │   ├── mis_store.js
+│   │   ├── monitor.js
+│   │   ├── mqtt_client.js
+│   │   ├── rtdb_io.js
+│   │   └── serverDb.js
+│   ├── database
+│   │   ├── home_network.sql
+│   │   └── migrations
+│   │       ├── 001_create_io_history.sql
+│   │       └── 002_create_chart_configs.sql
+│   ├── package.json
+│   ├── routes
+│   │   ├── camera.js
+│   │   ├── chart-configs.js
+│   │   ├── enroll.js
+│   │   ├── event-logs.js
+│   │   ├── events.js
+│   │   ├── io-history.js
+│   │   ├── io-points.js
+│   │   ├── logic.js
+│   │   ├── modules.js
+│   │   ├── monitor.js
+│   │   ├── realtime.js
+│   │   └── telegram.js
+│   ├── scripts
+│   │   ├── auto_clean_mqtt.sh
+│   │   ├── clean_retained_messages.js
+│   │   ├── list_di_esp01.js
+│   │   ├── list_do.js
+│   │   ├── print_rtdb_do.js
+│   │   └── print_rtdb_io.js
+│   ├── services
+│   │   └── telegram.js
+│   └── src
+│       ├── index.js
+│       ├── new_index.js
+│       └── routes
+│           ├── admin_pages.js
+│           └── static_pages.js
+├── doc
+│   ├── README.md
+│   ├── refactor_before.txt
+│   ├── structure_1.txt
+│   ├── structure_clean.txt
+│   ├── structure_full.txt
+│   └── test_apercu_status.sh
+└── frontend
+    ├── assets
+    │   ├── CSS
+    │   │   ├── admin.css
+    │   │   ├── captures.css
+    │   │   ├── charts.css
+    │   │   ├── dark-theme-global.css
+    │   │   ├── event-logs.css
+    │   │   ├── events.css
+    │   │   └── variables.css
+    │   ├── HTML
+    │   │   ├── admin.html
+    │   │   ├── captures.html
+    │   │   ├── chart-config.html
+    │   │   ├── chart-view.html
+    │   │   ├── events.html
+    │   │   ├── journal.html
+    │   │   ├── monitoring.html
+    │   │   └── telegram_test.html
+    │   ├── images
+    │   │   └── favicon.svg
+    │   └── JS
+    │       ├── admin.js
+    │       ├── captures.js
+    │       ├── chart-config.js
+    │       ├── chart-view.js
+    │       ├── events.js
+    │       ├── journal.js
+    │       └── load-navbar.js
+    ├── images
+    │   └── favicon.svg
+    └── public
+
+24 directories, 88 files

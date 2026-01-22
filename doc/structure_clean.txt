@@ -1,0 +1,30 @@
+.
+├── api
+│   └── routes
+├── config
+├── controllers
+├── core
+│   └── logic
+├── database
+│   └── migrations
+├── events
+├── models
+├── new_mvc_project
+│   ├── public
+│   │   ├── css
+│   │   └── js
+│   └── src
+│       ├── config
+│       ├── controllers
+│       ├── models
+│       └── views
+│           ├── home
+│           └── layouts
+├── public
+├── routes
+├── scripts
+├── services
+└── src
+    └── routes
+
+28 directories

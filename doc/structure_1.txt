@@ -1,0 +1,135 @@
+.
+├── backend
+│   ├── api
+│   │   ├── admin_api.js
+│   │   ├── admin_devices.js
+│   │   ├── db.js
+│   │   ├── esp_api.js
+│   │   ├── index.js
+│   │   └── routes
+│   ├── config
+│   │   └── telegram.js
+│   ├── controllers
+│   │   ├── CameraController.js
+│   │   ├── ChartConfigController.js
+│   │   ├── EnrollController.js
+│   │   ├── EventController.js
+│   │   ├── EventLogController.js
+│   │   ├── IoHistoryController.js
+│   │   ├── IoPointController.js
+│   │   ├── LogicController.js
+│   │   ├── ModuleController.js
+│   │   └── RealtimeController.js
+│   ├── core
+│   │   ├── buffer_io_points.js
+│   │   ├── buffer_store.js
+│   │   ├── cycle.js
+│   │   ├── esp_registry.js
+│   │   ├── event_engine.js
+│   │   ├── io_history_logger.js
+│   │   ├── logic
+│   │   │   └── logic.txt
+│   │   ├── logic_engine.js
+│   │   ├── mie_store.js
+│   │   ├── mis_store.js
+│   │   ├── monitor.js
+│   │   ├── mqtt_client.js
+│   │   ├── rtdb_io.js
+│   │   └── serverDb.js
+│   ├── database
+│   │   ├── home_network.sql
+│   │   └── migrations
+│   │       ├── 001_create_io_history.sql
+│   │       └── 002_create_chart_configs.sql
+│   ├── package.json
+│   ├── routes
+│   │   ├── camera.js
+│   │   ├── chart-configs.js
+│   │   ├── enroll.js
+│   │   ├── event-logs.js
+│   │   ├── events.js
+│   │   ├── io-history.js
+│   │   ├── io-points.js
+│   │   ├── logic.js
+│   │   ├── modules.js
+│   │   ├── monitor.js
+│   │   ├── realtime.js
+│   │   └── telegram.js
+│   ├── scripts
+│   │   ├── auto_clean_mqtt.sh
+│   │   ├── clean_retained_messages.js
+│   │   ├── list_di_esp01.js
+│   │   ├── list_do.js
+│   │   ├── print_rtdb_do.js
+│   │   └── print_rtdb_io.js
+│   ├── services
+│   │   └── telegram.js
+│   └── src
+│       ├── index.js
+│       ├── new_index.js
+│       └── routes
+│           ├── admin_pages.js
+│           └── static_pages.js
+├── frontend
+│   └── public
+│       ├── admin.css
+│       ├── admin.html
+│       ├── admin.js
+│       ├── captures
+│       │   ├── esp_cam_01-001-2026-01-09-15-51-22.jpg
+│       │   ├── esp_cam_01-001-2026-01-11-12-30-27.jpg
+│       │   ├── esp_cam_01-001-2026-01-13-17-25-51.jpg
+│       │   ├── esp_cam_01-001-2026-01-14-11-38-04.jpg
+│       │   ├── esp_cam_01-001-2026-01-17-10-13-27.jpg
+│       │   ├── esp_cam_01-002-2026-01-09-15-52-41.jpg
+│       │   ├── esp_cam_01-002-2026-01-17-12-20-09.jpg
+│       │   ├── esp_cam_01-003-2026-01-10-12-42-05.jpg
+│       │   ├── esp_cam_01-003-2026-01-10-14-50-40.jpg
+│       │   ├── esp_cam_01-004-2026-01-10-12-49-31.jpg
+│       │   ├── esp_cam_01-004-2026-01-10-14-54-21.jpg
+│       │   ├── esp_cam_01-005-2026-01-10-16-27-17.jpg
+│       │   ├── esp_cam_02-001-2026-01-07-15-14-01.jpg
+│       │   ├── esp_cam_02-001-2026-01-09-12-21-06.jpg
+│       │   ├── esp_cam_02-001-2026-01-10-10-11-20.jpg
+│       │   ├── esp_cam_02-001-2026-01-11-12-30-50.jpg
+│       │   ├── esp_cam_02-002-2026-01-07-16-36-04.jpg
+│       │   ├── esp_cam_02-002-2026-01-09-13-15-36.jpg
+│       │   ├── esp_cam_02-002-2026-01-10-14-56-06.jpg
+│       │   ├── esp_cam_02-003-2026-01-08-17-47-01.jpg
+│       │   ├── esp_cam_02-003-2026-01-09-13-48-22.jpg
+│       │   ├── esp_cam_02-003-2026-01-10-16-27-35.jpg
+│       │   ├── esp_cam_02-004-2026-01-08-18-14-04.jpg
+│       │   ├── esp_cam_02-004-2026-01-09-13-49-06.jpg
+│       │   ├── esp_cam_02-005-2026-01-09-13-56-01.jpg
+│       │   ├── esp_cam_02-006-2026-01-09-14-41-17.jpg
+│       │   ├── esp_cam_02-010-2026-01-09-15-47-35.jpg
+│       │   └── esp_cam_02-011-2026-01-09-16-34-19.jpg
+│       ├── captures.css
+│       ├── captures.html
+│       ├── captures.js
+│       ├── chart-config.html
+│       ├── chart-config.js
+│       ├── charts.css
+│       ├── chart-view.html
+│       ├── chart-view.js
+│       ├── dark-theme-global.css
+│       ├── event-logs.css
+│       ├── events.css
+│       ├── events.html
+│       ├── events.js
+│       ├── favicon.svg
+│       ├── journal.html
+│       ├── journal.js
+│       ├── load-navbar.js
+│       ├── monitoring.html
+│       ├── navbar.html
+│       ├── telegram_test.html
+│       └── variables.css
+├── README.md
+├── refactor_before.txt
+├── structure_1.txt
+├── structure_clean.txt
+├── structure_full.txt
+└── test_apercu_status.sh
+
+18 directories, 115 files
