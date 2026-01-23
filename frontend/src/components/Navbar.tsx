@@ -4,6 +4,7 @@ import './Navbar.css';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
   return (
     <nav className="navbar">
       <span className="navbar-logo">
@@ -26,6 +27,16 @@ const Navbar: React.FC = () => {
         <Link to="/captures" className={location.pathname === '/captures' ? 'navbar-link-active' : 'navbar-link'}>
           <span role="img" aria-label="captures">📷</span> Captures
         </Link>
+        {isDev && (
+          <a
+            href="http://localhost:3000/api-docs#/"
+            className="navbar-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span role="img" aria-label="swagger">🧩</span> API Docs
+          </a>
+        )}
         <span className="navbar-link" style={{ position: 'relative' }}>
           <span role="img" aria-label="config">⚙️</span> Configuration <span style={{fontSize: 12, marginLeft: 2}}>▼</span>
           <div className="navbar-config-dropdown">
