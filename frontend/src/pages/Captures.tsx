@@ -33,7 +33,7 @@ const Captures: React.FC = () => {
   // Récupère la liste de tous les devices connus (même sans photo)
   const fetchAllDevices = () => {
     const baseUrl = import.meta.env.VITE_API_URL || '';
-    axios.get(baseUrl + '/api/modules')
+    axios.get(baseUrl + '/modules')
       .then(res => {
         const data: { deviceName?: string }[] = res.data || [];
         const names: string[] = data.map((m) => m.deviceName || '').filter(Boolean);
@@ -44,7 +44,7 @@ const Captures: React.FC = () => {
   const fetchCaptures = () => {
     setLoading(true);
     const baseUrl = import.meta.env.VITE_API_URL || '';
-    let url = baseUrl + '/api/camera/captures';
+    let url = baseUrl + '/camera/captures';
     if (selectedDevice) {
       url += `/${encodeURIComponent(selectedDevice)}`;
     }
@@ -110,7 +110,7 @@ const Captures: React.FC = () => {
             const timeStr = date.toLocaleTimeString();
             return (
               <div className="captures-card" key={capture.filename + idx} onClick={() => setPreviewIdx(idx)}>
-                <img src={`${import.meta.env.VITE_API_URL}${capture.path}`} alt={capture.filename} className="captures-img" />
+                <img src={`${import.meta.env.VITE_CAPTURES_URL}${capture.path}`} alt={capture.filename} className="captures-img" />
                 <div className="captures-hover-info">
                   <div className="captures-hover-label">{device}</div>
                   <div className="captures-hover-date">{dateStr} {timeStr}</div>
@@ -137,7 +137,7 @@ const Captures: React.FC = () => {
               </button>
             )}
             <img
-              src={`${import.meta.env.VITE_API_URL}${captures[previewIdx].path}`}
+              src={`${import.meta.env.VITE_CAPTURES_URL}${captures[previewIdx].path}`}
               alt={captures[previewIdx].filename}
               className="captures-modal-img"
             />
