@@ -15,6 +15,7 @@ import { SystemConfig } from './entities/system-config.entity';
 import { MieModule } from './mie/mie.module';
 import { MisModule } from './mis/mis.module';
 import { SystemConfigModule } from './system-config/system-config.module';
+import { CameraModule } from './camera/camera.module';
 
 @Module({
   imports: [
@@ -44,6 +45,7 @@ import { SystemConfigModule } from './system-config/system-config.module';
     MieModule,
     MisModule,
     SystemConfigModule,
+    CameraModule,
   ],
 })
 export class AppModule {}

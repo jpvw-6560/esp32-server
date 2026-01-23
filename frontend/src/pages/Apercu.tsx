@@ -30,12 +30,12 @@ const Apercu: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    axios.get<Module[]>('http://localhost:3000/modules')
+    axios.get<Module[]>(`${import.meta.env.VITE_API_URL}/modules`)
       .then(res => {
         setModules(res.data);
         // Pour chaque module, récupérer ses IO
         Promise.all(res.data.map(module =>
-          axios.get<IO[]>(`http://localhost:3000/io-points?moduleId=${module.id}`)
+          axios.get<IO[]>(`${import.meta.env.VITE_API_URL}/io-points?moduleId=${module.id}`)
             .then(r => ({ id: module.id, ios: r.data }))
             .catch(() => ({ id: module.id, ios: [] }))
         )).then(results => {

@@ -14,7 +14,7 @@ const ListeMie: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    axios.get<Mie[]>('http://localhost:3000/mie')
+    axios.get<Mie[]>(`${import.meta.env.VITE_API_URL}/mie`)
       .then(res => {
         setData(res.data);
         setLoading(false);

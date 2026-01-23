@@ -27,7 +27,7 @@ const Courbes: React.FC = () => {
   const [showChart, setShowChart] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/chart-configs')
+    axios.get(`${import.meta.env.VITE_API_URL}/chart-configs`)
       .then(res => setConfigs(res.data))
       .catch(() => setConfigs([]));
   }, []);

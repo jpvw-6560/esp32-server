@@ -16,15 +16,15 @@ const Journal: React.FC = () => {
   const [daysToDelete, setDaysToDelete] = useState('30');
 
   useEffect(() => {
-    axios.get('http://localhost:3000/modules').then(res => setModules(res.data));
-    axios.get('http://localhost:3000/io-points').then(res => setIos(res.data));
+    axios.get(`${import.meta.env.VITE_API_URL}/modules`).then(res => setModules(res.data));
+    axios.get(`${import.meta.env.VITE_API_URL}/io-points`).then(res => setIos(res.data));
   }, []);
 
   // Historique dynamique
   const [logs, setLogs] = useState<any[]>([]);
 
   useEffect(() => {
-    let url = 'http://localhost:3000/event-logs';
+    let url = `${import.meta.env.VITE_API_URL}/event-logs`;
     const params = [];
     if (module) params.push(`device_name=${encodeURIComponent(module)}`);
     if (io) params.push(`symbolic_name=${encodeURIComponent(io)}`);

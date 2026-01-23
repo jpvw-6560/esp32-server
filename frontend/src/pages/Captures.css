@@ -1,3 +1,141 @@
+/* Flèches navigation modale */
+.captures-modal-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #23293a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  width: 2.5em;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.85;
+  transition: background 0.18s, color 0.18s, opacity 0.18s;
+}
+.captures-modal-arrow:hover {
+  background: #2980ff;
+  color: #fff;
+  opacity: 1;
+}
+.captures-modal-arrow-left {
+  left: -3.5em;
+}
+.captures-modal-arrow-right {
+  right: -3.5em;
+}
+/* Détails et actions modale */
+.captures-modal-details {
+  width: 100%;
+  background: #202534;
+  border-radius: 0 0 12px 12px;
+  margin-top: 0.5rem;
+  padding: 1.1rem 1.5rem 1.2rem 1.5rem;
+  color: #bfc8e2;
+  font-size: 1.08rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.captures-modal-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  margin-bottom: 0.2em;
+  flex-wrap: wrap;
+}
+.captures-modal-row b {
+  color: #fff;
+  margin: 0 0.2em;
+}
+.captures-modal-actions {
+  display: flex;
+  gap: 1.2em;
+  margin-top: 1.1em;
+}
+.captures-modal-btn {
+  background: #2980ff;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.6em 1.7em;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.captures-modal-btn:hover {
+  background: #156fc1;
+}
+.captures-modal-btn-danger {
+  background: #ff4d4f;
+}
+.captures-modal-btn-danger:hover {
+  background: #c92a2a;
+}
+/* Aperçu modale */
+.captures-modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 12, 20, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.captures-modal {
+  position: relative;
+  background: #181d25;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.32);
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+.captures-modal-img {
+  max-width: 80vw;
+  max-height: 65vh;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  margin-bottom: 1.2rem;
+}
+.captures-modal-filename {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  word-break: break-all;
+}
+.captures-modal-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.15s;
+}
+.captures-modal-close:hover {
+  color: #ff4d4f;
+}
 .captures-root {
   padding: 2.5rem 0 0 0;
   min-height: 100vh;
@@ -91,12 +229,58 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  position: relative;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+.captures-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.32);
+}
+
+.captures-hover-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(30,34,50,0.82) 70%, rgba(30,34,50,0.0) 100%);
+  transition: opacity 0.18s;
+  z-index: 2;
+  padding-bottom: 1.1em;
+}
+.captures-card:hover .captures-hover-info {
+  opacity: 1;
+  pointer-events: auto;
+}
+.captures-hover-label {
+  background: #2980ff;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.25em 0.9em;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.captures-hover-date {
+  color: #fff;
+  font-size: 0.92rem;
+  background: rgba(0,0,0,0.18);
+  border-radius: 8px;
+  padding: 0.18em 0.8em;
+  font-weight: 500;
 }
 .captures-img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain;
   background: #23293a;
+  display: block;
 }
 .captures-card-footer {
   display: flex;
